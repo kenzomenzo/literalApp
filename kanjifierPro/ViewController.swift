@@ -135,6 +135,8 @@ UINavigationControllerDelegate, UITextFieldDelegate, UIPickerViewDelegate, UIPic
                 wordCount = wordCount + 1
             }
         }
+        let newDict = [String: String]()
+        wordTranslationDictionary = newDict
     }
     
     func pickUp(_ textField : UITextField){
