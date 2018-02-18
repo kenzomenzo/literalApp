@@ -13,6 +13,8 @@
 		C516EC1C2038F45D0096CAE9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C516EC1B2038F45D0096CAE9 /* Assets.xcassets */; };
 		C516EC1F2038F45D0096CAE9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C516EC1D2038F45D0096CAE9 /* LaunchScreen.storyboard */; };
 		C516EC2A2038F45E0096CAE9 /* kanjifierProTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C516EC292038F45E0096CAE9 /* kanjifierProTests.swift */; };
+		C516EC352038F7290096CAE9 /* ComputerVisionService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C516EC342038F7290096CAE9 /* ComputerVisionService.swift */; };
+		C590140B203970D60011AB22 /* ROGoogleTranslate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C590140A203970D60011AB22 /* ROGoogleTranslate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +38,8 @@
 		C516EC252038F45E0096CAE9 /* kanjifierProTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = kanjifierProTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C516EC292038F45E0096CAE9 /* kanjifierProTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = kanjifierProTests.swift; sourceTree = "<group>"; };
 		C516EC2B2038F45E0096CAE9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C516EC342038F7290096CAE9 /* ComputerVisionService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComputerVisionService.swift; sourceTree = "<group>"; };
+		C590140A203970D60011AB22 /* ROGoogleTranslate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ROGoogleTranslate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +83,8 @@
 			children = (
 				C516EC142038F45D0096CAE9 /* AppDelegate.swift */,
 				C516EC162038F45D0096CAE9 /* ViewController.swift */,
+				C516EC342038F7290096CAE9 /* ComputerVisionService.swift */,
+				C590140A203970D60011AB22 /* ROGoogleTranslate.swift */,
 				C516EC182038F45D0096CAE9 /* Main.storyboard */,
 				C516EC1B2038F45D0096CAE9 /* Assets.xcassets */,
 				C516EC1D2038F45D0096CAE9 /* LaunchScreen.storyboard */,
@@ -201,6 +207,8 @@
 			files = (
 				C516EC172038F45D0096CAE9 /* ViewController.swift in Sources */,
 				C516EC152038F45D0096CAE9 /* AppDelegate.swift in Sources */,
+				C590140B203970D60011AB22 /* ROGoogleTranslate.swift in Sources */,
+				C516EC352038F7290096CAE9 /* ComputerVisionService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

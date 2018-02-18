@@ -18,5 +18,7 @@
 	<string>1.0</string>
 	<key>CFBundleVersion</key>
 	<string>1</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>Allows use of the photo library for identifying images</string>
 </dict>
 </plist>

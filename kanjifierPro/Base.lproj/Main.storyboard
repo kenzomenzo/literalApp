@@ -1,24 +1,94 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A277" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="HelveticaNeueLights.ttc">
+            <string>HelveticaNeue-Thin</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="kanjifierPro" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="zJr-Ef-e9p">
+                                <rect key="frame" x="30" y="40" width="315" height="607"/>
+                                <subviews>
+                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="40b-ns-Nuj">
+                                        <rect key="frame" x="0.0" y="0.0" width="315" height="1"/>
+                                        <segments>
+                                            <segment title="Camera"/>
+                                            <segment title="Photo Library"/>
+                                        </segments>
+                                        <connections>
+                                            <action selector="switchedSource:" destination="BYZ-38-t0r" eventType="valueChanged" id="FwN-h2-Ooe"/>
+                                        </connections>
+                                    </segmentedControl>
+                                    <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="buttonLight" translatesAutoresizingMaskIntoConstraints="NO" id="fng-Mk-k3e">
+                                        <rect key="frame" x="0.0" y="8" width="315" height="462.5"/>
+                                        <gestureRecognizers/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="fng-Mk-k3e" secondAttribute="height" multiplier="750:1100" id="HE6-Gk-sgK"/>
+                                        </constraints>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="z9D-oc-BMq" appends="YES" id="BKQ-pf-MJ8"/>
+                                        </connections>
+                                    </imageView>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Japanese" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Qtt-xo-gvX">
+                                        <rect key="frame" x="0.0" y="478.5" width="315" height="22.5"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Hit the L to choose a photo!" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="RvK-8S-dqm">
+                                        <rect key="frame" x="0.0" y="509" width="315" height="98"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="17"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="zJr-Ef-e9p" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="8jP-sK-XMz"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="zJr-Ef-e9p" secondAttribute="bottom" constant="20" id="9Xa-eB-w6G"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="zJr-Ef-e9p" secondAttribute="trailing" constant="30" id="LpG-G5-rWU"/>
+                            <constraint firstItem="zJr-Ef-e9p" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="sP4-pb-xCH"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="imageSourceControl" destination="40b-ns-Nuj" id="dQZ-Mj-Nzr"/>
+                        <outlet property="photoImageView" destination="fng-Mk-k3e" id="dtB-Yz-RK8"/>
+                        <outlet property="resultsField" destination="RvK-8S-dqm" id="vvt-5w-VyQ"/>
+                        <outlet property="txt_pickUpData" destination="Qtt-xo-gvX" id="cWV-bw-Kzu"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="z9D-oc-BMq">
+                    <connections>
+                        <action selector="selectImage:" destination="BYZ-38-t0r" id="w4x-sP-wjA"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
+            <point key="canvasLocation" x="45.600000000000001" y="43.628185907046479"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="buttonLight" width="350" height="350"/>
+    </resources>
 </document>
