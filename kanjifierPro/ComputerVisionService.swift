@@ -10,8 +10,8 @@ import Foundation
 
 class ComputerVisionService {
     var visionUrl = "https://westcentralus.api.cognitive.microsoft.com/vision/v1.0/tag"
-    var visionKey1 = "2c0b1e0c169f4420b9fab4a352947197"
-    var visionKey2 = "0968753c7fc24cd8bae4df1c34a03f52"
+    var visionKey1 = "Insert your own key here!"
+    var visionKey2 = "Insert your own key here!"
     var contentType = "application/octet-stream"
     
     var defaultSession = URLSession(configuration: .default)

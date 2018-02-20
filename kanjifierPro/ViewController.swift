@@ -64,7 +64,7 @@ UINavigationControllerDelegate, UITextFieldDelegate, UIPickerViewDelegate, UIPic
     }
     
     func translateText(wordNum: Int, myText: String) {
-        let translator = ROGoogleTranslate(with: "AIzaSyDymbsjp4qqdqDRpH65-mArbP2VkWZZMvE")
+        let translator = ROGoogleTranslate(with: "Insert your key here!")
         let params = ROGoogleTranslateParams(source: "en", target: languages[txt_pickUpData.text!]!, text: myText)
         translator.translate(params: params) { (result) in
             self.wordTranslationDictionary[myText] = result
